@@ -1,4 +1,4 @@
-from snaktrak.settings.dev import NEXMO_KEY, NEXMO_SECRET, NEXMO_PHONE_NUMBER
+from snaktrak.settings.prod import NEXMO_KEY, NEXMO_SECRET, NEXMO_PHONE_NUMBER
 import urllib
 
 def sendSMS(to, msg):

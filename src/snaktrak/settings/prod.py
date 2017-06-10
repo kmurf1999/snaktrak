@@ -12,11 +12,11 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'snaktrak_prod',
+        'NAME': 'snaktrak',
         'USER': 'snaktrak',
-        'PASSWORD': 'password',
-        'HOST': 'postgres',
-        'PORT': 5432,
+        'PASSWORD': 'Cheezballs39',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
