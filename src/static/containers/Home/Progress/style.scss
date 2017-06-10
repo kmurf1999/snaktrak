@@ -1,0 +1,11 @@
+.progress-summary {
+  > div {
+    width: auto;
+    text-align: center;
+    color: $color-gray;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}

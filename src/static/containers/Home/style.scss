@@ -1,0 +1,15 @@
+.landing-page {
+  > div {
+    width: calc(100vw - 50px;);
+    max-width: 500px;
+  }
+  h1 {
+    font-family: Roboto;
+    font-weight: 300;
+    color: $color-gray;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

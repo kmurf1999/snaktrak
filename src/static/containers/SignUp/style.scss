@@ -1,0 +1,9 @@
+.status-text {
+  background-color: $color-red !important;
+  color: $color-white;
+  font-size: 0.9em;
+  padding: 5px;
+  width: calc(100% - 10px) !important;
+  border-radius: 2px;
+  word-wrap: break-word;
+}

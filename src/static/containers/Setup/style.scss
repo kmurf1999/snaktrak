@@ -1,0 +1,25 @@
+.validation-resend, .validation-submit {
+  &:hover,
+  &:focus {
+    border: none;
+    transition: background-color .2s;
+    background-color: $color-blue-light;
+  }
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 1em;
+  width: calc(50% - 10px);
+  display: inline-block;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  color: $color-gray-light;
+  background-color: $color-gray-dark;
+  margin: 5px;
+}
+
+
+.signup-sub-header {
+  margin: 0;
+  font-weight: 200;
+}

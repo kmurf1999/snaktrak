@@ -1,0 +1,19 @@
+CACHE MANIFEST
+#ver:6/10/2017, 4:23:46 AM
+#plugin:4.8.1
+
+CACHE:
+/images/favicon.png?9336271acd0abd2cba9d9a68b36b7d4d
+/images/spongebob.jpg?74b38dd05e7e12f7a685acb6fc9c24da
+/static/app.511ee21648d0b182fa4d.js
+/static/vendor.511ee21648d0b182fa4d.js
+/static/styles/app.css
+/static/src.html
+/static/icon_512x512.png
+/static/icon_192x192.png
+/static/icon_128x128.png
+/static/icon_96x96.png
+/static/manifest.json
+
+NETWORK:
+*

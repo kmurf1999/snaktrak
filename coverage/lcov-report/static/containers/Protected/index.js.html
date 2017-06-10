@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for static/containers/Protected/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">static/containers/Protected</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.55% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.55% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/11</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionCreators from '../../actions/data';
+&nbsp;
+class ProtectedView extends React.Component {
+&nbsp;
+    static propTypes = {
+        isFetching: React.PropTypes.bool.isRequired,
+        data: React.PropTypes.string,
+        token: React.PropTypes.string.isRequired,
+        actions: React.PropTypes.shape({
+            dataFetchProtectedData: React.PropTypes.func.isRequired
+        }).isRequired
+    };
+&nbsp;
+    static defaultProps = {
+        data: ''
+    };
+&nbsp;
+    // Note: have to use componentWillMount, if I add this in constructor will get error:
+    // Warning: setState(...): Cannot update during an existing state transition (such as within `render`).
+    // Render methods should be a pure function of props and state.
+    componentWillMount() {
+        c</span>onst token = <span class="cstat-no" title="statement not covered" >this.props.token;
+<span class="cstat-no" title="statement not covered" >        this.props.actions.dataFetchProtectedData(token);</span>
+    }
+&nbsp;
+    render() {
+<span class="cstat-no" title="statement not covered" >        return (</span>
+            &lt;div className="protected"&gt;
+                &lt;div className="container"&gt;
+                    &lt;h1 className="text-center margin-bottom-medium"&gt;Protected&lt;/h1&gt;
+                    {this.props.isFetching === true ?
+                        &lt;p className="text-center"&gt;Loading data...&lt;/p&gt;
+                        :
+                        &lt;div&gt;
+                            &lt;p&gt;Data received from the server:&lt;/p&gt;
+                            &lt;div className="margin-top-small"&gt;
+                                &lt;div className="alert alert-info"&gt;
+                                    &lt;b&gt;{this.props.data}&lt;/b&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div className="margin-top-medium"&gt;
+                                &lt;h5 className="margin-bottom-small"&gt;&lt;b&gt;How does this work?&lt;/b&gt;&lt;/h5&gt;
+                                &lt;p className="margin-bottom-small"&gt;
+                                    On the &lt;code&gt;componentWillMount&lt;/code&gt; method of the
+                                    &amp;nbsp;&lt;code&gt;ProtectedView&lt;/code&gt; component, the action
+                                    &amp;nbsp;&lt;code&gt;dataFetchProtectedData&lt;/code&gt; is called. This action will first
+                                    dispatch a &lt;code&gt;DATA_FETCH_PROTECTED_DATA_REQUEST&lt;/code&gt; action to the Redux
+                                    store. When an action is dispatched to the store, an appropriate reducer for
+                                    that specific action will change the state of the store. After that it will then
+                                    make an asynchronous request to the server using
+                                    the &lt;code&gt;isomorphic-fetch&lt;/code&gt; library. On its
+                                    response, it will dispatch the &lt;code&gt;DATA_RECEIVE_PROTECTED_DATA&lt;/code&gt; action
+                                    to the Redux store. In case of wrong credentials in the request, the&amp;nbsp;
+                                    &lt;code&gt;AUTH_LOGIN_USER_FAILURE&lt;/code&gt; action will be dispatched.
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    Because the &lt;code&gt;ProtectedView&lt;/code&gt; is connected to the Redux store, when the
+                                    value of a property connected to the view is changed, the view is re-rendered
+                                    with the new data.
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    }
+                &lt;/div&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+&nbsp;
+const <span class="fstat-no" title="function not covered" >mapStateToProps = (</span>state) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        data: state.data.data,
+        isFetching: state.data.isFetching
+    };
+};
+&nbsp;
+const <span class="fstat-no" title="function not covered" >mapDispatchToProps = (</span>dispatch) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        actions: bindActionCreators(actionCreators, dispatch)
+    };
+};
+&nbsp;
+export default connect(mapStateToProps, mapDispatchToProps)(ProtectedView);
+export { ProtectedView as ProtectedViewNotConnected };
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 20 2017 15:46:33 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

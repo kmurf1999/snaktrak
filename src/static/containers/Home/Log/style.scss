@@ -1,0 +1,167 @@
+$log-entry-closed-height: 50px;
+$log-entry-expanded-cirle-diameter: calc(20px + 5vw);
+$log-entry-expanded-font-size: calc(12px + 1vw);
+
+.log-container {
+  background: $color-white;
+  margin: 10px auto;
+  width: calc(100vw - 20px);
+  max-width: 900px;
+  box-shadow: 0 3px 6px transparentize($color-black, 0.88);
+}
+
+.log-header {
+  font-family: Roboto;
+  font-weight: 200;
+  font-size: 1.5em;
+  margin: 0 auto;
+  padding: 5px;
+  color: $color-gray;
+}
+
+.log-list {
+  position: relative;
+  overflow-y: auto;
+  min-height: calc(20vw);
+  max-height: calc(50vw);
+}
+
+.log-entry {
+  &:before {
+    content: "";
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-orange-light;
+  }
+  &:after {
+    content: "";
+    height: 100%;
+    width: 2px;
+    right: 0;
+    top: 0;
+    background: $color-gray;
+    position: absolute;
+  }
+  :hover ~ .log-entry-expand-button {
+    color: $color-orange-light;
+  }
+  width: calc(100% - 10px);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  max-height: $log-entry-closed-height;
+  margin: 5px;
+  background: $color-white;
+  border-bottom: 1px solid $color-gray-light;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.log-entry-foodname {
+  margin: 0 5px;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: $color-gray;
+}
+
+.log-entry-fooddetail {
+  margin: 0 5px;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: .9em;
+  color: $color-gray;
+}
+
+.log-entry-time {
+  margin: 0 5px;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: .8em;
+  color: $color-gray;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+.log-entry-expand-button {
+  &:hover {
+    color: $color-orange-light;
+  }
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  color: $color-gray;
+}
+
+.log-entry-expanded {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.log-entry-expanded-group {
+  > h2 {
+    display: inline-block;
+    font-size: $log-entry-expanded-font-size;
+    line-height: $log-entry-expanded-cirle-diameter;
+  }
+  color: $color-gray;
+}
+
+.color-circle {
+  border-radius: 50%;
+  width: $log-entry-expanded-cirle-diameter;
+  height: $log-entry-expanded-cirle-diameter;
+  margin: 0;
+  text-align: center;
+  color: $color-white;
+  font-family: 'sans';
+  font-weight: 400;
+  background: $color-blue;
+}
+
+.log-entry-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 16px;
+}
+
+.button {
+  width: calc(25% - 10px);
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  color: $color-gray;
+  background: none;
+  margin: 5px;
+}
+
+.button-red {
+  &:hover,
+  &:focus {
+    border: none;
+    transition: background-color .2s;
+    background-color: $color-red;
+  }
+  border: 1px solid $color-red;
+}
+.button-blue {
+  &:hover,
+  &:focus {
+    border: none;
+    transition: background-color .2s;
+    background-color: $color-blue;
+    color: $color-white;
+  }
+  border: 1px solid $color-blue;
+}
+
+hr {
+  margin: 0 5px !important;
+}
