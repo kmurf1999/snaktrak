@@ -1,4 +1,4 @@
-#!/home/kmurph/Dropbox/snaktrak/src/venv/bin/python2
+#!/home/kmurph/snaktrak/src/venv/bin/python
 
 # -*- coding: utf-8 -*-
 import re

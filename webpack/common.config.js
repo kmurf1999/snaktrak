@@ -8,7 +8,7 @@ const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const OfflinePlugin = require('offline-plugin');
 
-const PUBLIC_URL = 'http://localhost:8000/';
+const PUBLIC_URL = 'http://159.203.191.174/';
 
 // Need to resolve to the **directory** of `src`.
 const resolveSrc = (mod) => {
@@ -54,7 +54,7 @@ const common = {
         app: PATHS.app
     },
     output: {
-        filename: '[name].[hash].js',
+        filename: '[name].js',
         path: PATHS.build,
         publicPath: '/static'
     },
@@ -154,7 +154,6 @@ const common = {
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '../src/static/index.html'),
-            hash: true,
             filename: 'src.html',
             inject: 'body'
         }),

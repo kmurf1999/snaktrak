@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const extractCSS = new ExtractTextPlugin('styles/[name].css');
 
@@ -25,7 +24,6 @@ module.exports = {
         }],
     },
     plugins: [
-        extractCSS,
-        new BundleAnalyzerPlugin()
+        extractCSS
     ]
 };

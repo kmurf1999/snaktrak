@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/kmurph/Dropbox/snaktrak/src/venv"
+VIRTUAL_ENV="/home/kmurph/snaktrak/src/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

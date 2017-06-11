@@ -1,4 +1,4 @@
-#!/home/kmurph/Dropbox/snaktrak/src/venv/bin/python2
+#!/home/kmurph/snaktrak/src/venv/bin/python
 from django.core import management
 
 if __name__ == "__main__":

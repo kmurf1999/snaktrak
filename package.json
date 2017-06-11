@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "track and display nutrition and weight via sms",
   "scripts": {
-    "dev": "webpack --progress --display-error-details --config webpack/common.config.js --watch",
-    "prod": "webpack --progress -p --config webpack/common.config.js --watch",
+    "dev": "webpack --progress --display-error-details --config webpack/common.config.js",
+    "prod": "webpack --progress -p --config webpack/common.config.js",
     "mocha": "mocha --require tests/require --recursive --compilers js:babel-core/register tests/js",
     "mocha:watch": "npm run mocha -- --watch tests/js",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --require tests/require --recursive --compilers js:babel-core/register --colors --reporter dot tests/js/",

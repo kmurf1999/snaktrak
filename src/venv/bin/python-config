@@ -1,4 +1,4 @@
-#!/home/kmurph/Dropbox/snaktrak/src/venv/bin/python
+#!/home/kmurph/snaktrak/src/venv/bin/python
 
 import sys
 import getopt

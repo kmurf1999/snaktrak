@@ -9,7 +9,7 @@ SECRET_KEY = 'ajsdgas7&*kosdsa21[]jaksdhlka-;kmcv8l$#diepsm8&ah^'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['159.203.191.174']
 
 # Application definition
 
@@ -77,9 +77,9 @@ AUTH_USER_MODEL = 'accounts.User'
 ACCOUNT_ACTIVATION_DAYS = 7  # days
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_root'),
+    os.path.join(BASE_DIR, 'static_dist'),
 )
 
 # store static files locally and serve with whitenoise
