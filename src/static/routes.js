@@ -12,7 +12,6 @@ export default(
         <Route path="signup" component={SignUpView} />
         <Route path="signup/setup" component={SetupView} />
         <Route path="signup/validate" component={ValidateNumberView} />
-        <Route path="protected" component={requireAuthentication(ProtectedView)} />
         <Route path="*" component={NotFoundView} />
     </Route>
 );

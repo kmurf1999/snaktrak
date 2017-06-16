@@ -6,9 +6,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const WebpackPwaManifest = require('webpack-pwa-manifest')
-const OfflinePlugin = require('offline-plugin');
 
-const PUBLIC_URL = 'http://snaktrak.io/';
 
 // Need to resolve to the **directory** of `src`.
 const resolveSrc = (mod) => {
@@ -176,10 +174,6 @@ const common = {
                }
            ]
        }),
-       new OfflinePlugin({
-         excludes: ['**/.*', '**/*.map'],
-         externals: [PUBLIC_URL]
-       })
     ],
 };
 
