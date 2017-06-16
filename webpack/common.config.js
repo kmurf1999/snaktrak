@@ -8,7 +8,7 @@ const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const OfflinePlugin = require('offline-plugin');
 
-const PUBLIC_URL = 'http://159.203.191.174/';
+const PUBLIC_URL = 'http://snaktrak.io/';
 
 // Need to resolve to the **directory** of `src`.
 const resolveSrc = (mod) => {
@@ -39,6 +39,7 @@ const VENDOR = [
     'material-ui',
     'classnames',
     'redux',
+    'lodash',
     'react-router-redux',
     'victory-pie',
     'victory-core',
@@ -115,13 +116,14 @@ const common = {
     },
     plugins: [
         // extract all common modules to vendor so we can load multiple apps in one page
-        // new webpack.optimize.CommonsChunkPlugin({
+	// new webpack.optimize.CommonsChunkPlugin({
         //     name: 'vendor',
         //     filename: 'vendor.[hash].js'
         // }),
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vendor'
-        // }),
+        new webpack.optimize.CommonsChunkPlugin({
+             name: 'vendor',
+             filename: 'vendor.js'
+        }),
         new webpack.DefinePlugin({
           'process.env': { NODE_ENV: TARGET === 'dev' ? '"development"' : '"production"' },
           '__DEVELOPMENT__': TARGET === 'dev'
@@ -177,10 +179,7 @@ const common = {
        new OfflinePlugin({
          excludes: ['**/.*', '**/*.map'],
          externals: [PUBLIC_URL]
-       }),
-       new webpack.optimize.CommonsChunkPlugin({
-         name: "vendor"
-       }),
+       })
     ],
 };
 

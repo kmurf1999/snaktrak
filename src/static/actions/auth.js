@@ -1,3 +1,4 @@
+//import fetch from 'isomorphic-fetch';
 import { push } from 'react-router-redux';
 import { SERVER_URL } from '../utils/config';
 import { checkHttpStatus, parseJSON } from '../utils';
@@ -30,8 +31,6 @@ import {
 import { dataFilterEntries } from './data';
 import { changeDate } from './menu';
 /// Login actions ///
-// [in order]
-// authLoginUser, authLoginUserRequest, authLoginUserFailure, authLoginUserSuccess
 export function authLoginUser(username, password, redirect = '/') {
     return (dispatch) => {
         dispatch(authLoginUserRequest());
@@ -221,7 +220,8 @@ export function authValidation(token, key, redirect="/signup/setup") {
               dispatch(authValidationFailure('Connection Error', 'An error occurred while sending your data!'));
           }
 
-          //dispatch(push('/login'));
+        
+  //dispatch(push('/login'));
           return Promise.resolve(); // TODO: we need a promise here because of the tests, find a better way
       });
   }

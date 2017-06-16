@@ -7,7 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 PAGE_CACHE_SECONDS = 60
 
 # TODO: n a real production server this should have a proper url
-ALLOWED_HOSTS = ['159.203.191.174', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['snaktrak.io', '159.203.191.174', 'localhost', '127.0.0.1']
 
 DATABASES = {
     'default': {
@@ -57,7 +57,14 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'verbose'
-        }
+        },
+        'gunicorn': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'verbose',
+            'filename': '/home/kmurph/snaktrak/src/gunicorn.errors',
+            'maxBytes': 1024 * 1024 * 100,  # 100 mb
+        },
     },
     'loggers': {
         'django.db.backends': {
@@ -74,6 +81,11 @@ LOGGING = {
             'level': 'DEBUG',
             'handlers': ['sentry'],
             'propagate': False,
+        },
+        'gunicorn.errors': {
+            'level': 'DEBUG',
+            'handlers': ['gunicorn'],
+            'propagate': True,
         },
     },
 }

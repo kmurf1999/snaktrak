@@ -15,7 +15,7 @@ from lib.utils import AtomicMixin
 
 from random import randint
 
-
+#from accounts.utils import sendSMS
 class UserRegisterView(AtomicMixin, CreateModelMixin, GenericAPIView):
     serializer_class = UserRegistrationSerializer
     authentication_classes = ()
@@ -23,6 +23,7 @@ class UserRegisterView(AtomicMixin, CreateModelMixin, GenericAPIView):
     def post(self, request):
         """User registration view."""
         return self.create(request)
+
 
 from accounts.utils import sendSMS
 class UserValidatePhoneView(GenericAPIView):

@@ -77,9 +77,9 @@ AUTH_USER_MODEL = 'accounts.User'
 ACCOUNT_ACTIVATION_DAYS = 7  # days
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static_dist'),
+    os.path.join(BASE_DIR, 'static_root'),
 )
 
 # store static files locally and serve with whitenoise
