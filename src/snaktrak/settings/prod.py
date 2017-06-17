@@ -7,7 +7,7 @@ TEMPLATE_DEBUG = DEBUG
 PAGE_CACHE_SECONDS = 60
 
 # TODO: n a real production server this should have a proper url
-ALLOWED_HOSTS = ['snaktrak.io', '159.203.191.174', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.snaktrak.io', '159.203.191.174', 'localhost', '127.0.0.1']
 
 DATABASES = {
     'default': {

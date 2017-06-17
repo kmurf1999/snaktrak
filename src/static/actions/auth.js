@@ -76,7 +76,7 @@ export function authLoginUserRequest() {
 }
 
 export function authLoginUserFailure(error, message) {
-    sessionStorage.removeItem('token');
+    localStorage.removeItem('token');
     return {
         type: AUTH_LOGIN_USER_FAILURE,
         payload: {
@@ -87,8 +87,8 @@ export function authLoginUserFailure(error, message) {
 }
 
 export function authLoginUserSuccess(token, user) {
-    sessionStorage.setItem('token', token);
-    sessionStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user));
     return {
         type: AUTH_LOGIN_USER_SUCCESS,
         payload: {
@@ -109,8 +109,8 @@ export function authLogoutAndRedirect() {
 }
 
 export function authLogout() {
-    sessionStorage.removeItem('token');
-    sessionStorage.removeItem('user');
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
     return {
         type: AUTH_LOGOUT_USER
     };
@@ -166,7 +166,7 @@ export function authSignUpUserRequest() {
 }
 
 export function authSignUpUserFailure(error, message) {
-  sessionStorage.removeItem('token');
+  localStorage.removeItem('token');
   return {
     type: AUTH_SIGNUP_USER_FAILURE,
     payload: {
@@ -374,7 +374,7 @@ export function authSetupFormSubmit(token, form, username, phone_number, redirec
 
 // Setup form change success
 export function authUpdateUserSuccess(user){
-  sessionStorage.setItem('user', JSON.stringify(user));
+  localStorage.setItem('user', JSON.stringify(user));
   return {
     type: AUTH_UPDATE_USER_SUCCESS,
     payload: {

@@ -8,7 +8,7 @@ const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const OfflinePlugin = require('offline-plugin');
 
-const PUBLIC_URL = 'http://snaktrak.io/';
+const PUBLIC_URL = 'https://snaktrak.io/';
 
 // Need to resolve to the **directory** of `src`.
 const resolveSrc = (mod) => {
@@ -156,7 +156,7 @@ const common = {
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '../src/static/index.html'),
-            filename: 'src.html',
+            filename: 'index.html',
             inject: 'body'
         }),
         new CleanWebpackPlugin([PATHS.build], {
