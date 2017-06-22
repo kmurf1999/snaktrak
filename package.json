@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "track and display nutrition and weight via sms",
   "scripts": {
-    "dev": "webpack --progress --display-error-details --config webpack/common.config.js",
+    "dev": "webpack --progress --display-error-details --config webpack/common.config.js --watch",
     "prod": "webpack --progress -p --config webpack/common.config.js",
     "mocha": "mocha --require tests/require --recursive --compilers js:babel-core/register tests/js",
     "mocha:watch": "npm run mocha -- --watch tests/js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Seedstars/django-react-redux-base.git"
+    "url": "git+https://github.com/ruffers9/snaktrak"
   },
   "author": "Kyle Murphy <ruffers39@gmail.com>",
   "license": "MIT",

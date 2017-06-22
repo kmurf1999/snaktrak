@@ -6,7 +6,6 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const WebpackPwaManifest = require('webpack-pwa-manifest')
-const OfflinePlugin = require('offline-plugin');
 
 const PUBLIC_URL = 'https://snaktrak.io/';
 
@@ -116,7 +115,6 @@ const common = {
     },
     plugins: [
         // extract all common modules to vendor so we can load multiple apps in one page
-	// new webpack.optimize.CommonsChunkPlugin({
         //     name: 'vendor',
         //     filename: 'vendor.[hash].js'
         // }),
@@ -172,14 +170,10 @@ const common = {
            icons: [
                {
                    src: path.resolve('src/static/images/favicon.png'),
-                   sizes: [96, 128, 192, 512] // multiple sizes
+                   sizes: [96, 192, 512] // multiple sizes
                }
            ]
        }),
-       new OfflinePlugin({
-         excludes: ['**/.*', '**/*.map'],
-         externals: [PUBLIC_URL]
-       })
     ],
 };
 

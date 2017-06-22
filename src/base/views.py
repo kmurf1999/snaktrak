@@ -32,7 +32,6 @@ class WebhookView(GenericAPIView):
         data = request.data
         user = get_object_or_404(User, phone_number=data['msisdn'])
         query = data['text']
-
         if user.confirmed_phone_number:
             if re.search(r'(lbs)|(weight)|(weighed)|(^\s*\d+\.?\d*\s*$)', query):
                 #weight entry
@@ -42,7 +41,6 @@ class WebhookView(GenericAPIView):
                 nutrition = get_nutrition(query)
                 for item in nutrition:
                     FoodEntry.objects.create_entry(item, user)
-
         return Response(data, status=status.HTTP_200_OK)
 
 

@@ -1,0 +1,27 @@
+{
+  "name": "SnakTrak",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "short_name": "SnakTrak",
+  "description": "easy nutrition tracking",
+  "background_color": "#EEEEEE",
+  "theme_color": "#00bcd4",
+  "icons": [
+    {
+      "src": "icon_512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

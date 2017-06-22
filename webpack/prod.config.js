@@ -1,7 +1,12 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 const extractCSS = new ExtractTextPlugin('styles/[name].css');
+const OfflinePlugin = require('offline-plugin');
+
+const PUBLIC_URL = 'https://snaktrak.io/';
+const basePath = path.resolve(__dirname, '../src/static/');
 
 
 module.exports = {
@@ -34,6 +39,19 @@ module.exports = {
                 warnings: false
             }
         }),
-        new webpack.optimize.AggressiveMergingPlugin()
+        new webpack.optimize.AggressiveMergingPlugin(),
+        new OfflinePlugin({
+          publicPath: '/',
+          excludes: ['**/.*', '**/*.map'],
+          externals: ['/'],
+          ServiceWorker: {
+              navigateFallbackURL: '/'
+          },
+          AppCache: {
+              FALLBACK: {
+                  '/': '/200.html'
+              }
+          }
+        })
     ]
 };

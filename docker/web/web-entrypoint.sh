@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 npm i
-npm run prod
+npm run dev
