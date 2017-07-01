@@ -17,82 +17,82 @@ import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
 
 const renderField =  ({ input, label, type, meta: { touched, error, warning } }) => (
   <div>
-      <TextField
-        {...input}
-        floatingLabelText={`${label}`}
-        required
-        type={type}
-        errorText={touched && error || touched && warning ? `${error}` : ''}
-      />
+    <TextField
+    {...input}
+    floatingLabelText={`${label}`}
+    required
+    type={type}
+    errorText={touched && error || touched && warning ? `${error}` : ''}
+    />
   </div>
 )
 
 class LoginView extends React.Component {
 
   constructor(props) {
-      super(props);
+    super(props);
 
-      const redirectRoute = this.props.location ? this.props.location.query.next || '/' : '/';
-      this.state = {
-          redirectTo: redirectRoute
-      };
+    const redirectRoute = this.props.location ? this.props.location.query.next || '/' : '/';
+    this.state = {
+      redirectTo: redirectRoute
+    };
   }
 
   componentWillMount() {
-    if(this.props.isAuthenticated) {
-      this.props.dispatch(push('/'));
-    }
+  if(this.props.isAuthenticated) {
+    this.props.dispatch(push('/'));
+  }
   }
 
   onSubmit(props) {
-    this.props.actions.authLoginUser(props.username, props.password);
-    //call submit action
+  this.props.actions.authLoginUser(props.username, props.password);
+  //call submit action
   }
 
   render() {
-    const { statusText, handleSubmit, pristine, reset, submitting } = this.props;
-    return (
-      <div style={{display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", marginTop: "16px"}}>
-        <h2>Login</h2>
-        <Paper zDepth={1} className="form">
-          <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
-            {statusText ? <div className="status-text">{statusText}</div> : ''}
-            <Field name="username" type="text" label="Username" component={renderField} />
-            <Field name="password" type="password" label="Password" component={renderField} />
-            <RaisedButton style={{marginTop: "10px"}} label="Login" fullWidth={true} type="submit" disabled={pristine || submitting} primary={true} />
-          </form>
-        </Paper>
-        <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
-      </div>
-    );
+  const { statusText, handleSubmit, pristine, reset, submitting } = this.props;
+  return (
+    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", marginTop: "16px"}}>
+    <h2>Login</h2>
+    <Paper zDepth={1} className="form">
+      <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
+      {statusText ? <div className="status-text">{statusText}</div> : ''}
+      <Field name="username" type="text" label="Username" component={renderField} />
+      <Field name="password" type="password" label="Password" component={renderField} />
+      <RaisedButton style={{marginTop: "10px"}} label="Login" fullWidth={true} type="submit" disabled={pristine || submitting} primary={true} />
+      </form>
+    </Paper>
+    <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
+    </div>
+  );
   }
 }
 
 function validate(values) {
   const errors = {};
   if (!values.username) {
-    errors.username = 'You must enter a username';
+  errors.username = 'You must enter a username';
   }
   if (!values.password) {
-    errors.password = 'You must enter a password';
+  errors.password = 'You must enter a password';
   }
 
   return errors;
 }
 
 const mapStateToProps = (state) => {
-    return {
-        isAuthenticated: state.auth.isAuthenticated,
-        isAuthenticating: state.auth.isAuthenticating,
-        statusText: state.auth.statusText,
-    };
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    isAuthenticating: state.auth.isAuthenticating,
+    statusText: state.auth.statusText,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        dispatch,
-        actions: bindActionCreators(actionCreators, dispatch)
-    };
+  return {
+    dispatch,
+    actions: bindActionCreators(actionCreators, dispatch)
+  };
 };
 
 LoginView = reduxForm({

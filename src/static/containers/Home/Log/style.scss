@@ -28,25 +28,25 @@ $log-entry-expanded-font-size: calc(12px + 1vw);
 
 .log-entry {
   &:before {
-    content: "";
-    height: 100%;
-    width: 2px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $color-orange-light;
+  content: "";
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $color-orange-light;
   }
   &:after {
-    content: "";
-    height: 100%;
-    width: 2px;
-    right: 0;
-    top: 0;
-    background: $color-gray;
-    position: absolute;
+  content: "";
+  height: 100%;
+  width: 2px;
+  right: 0;
+  top: 0;
+  background: $color-gray;
+  position: absolute;
   }
   :hover ~ .log-entry-expand-button {
-    color: $color-orange-light;
+  color: $color-orange-light;
   }
   width: calc(100% - 10px);
   overflow: hidden;
@@ -88,7 +88,7 @@ $log-entry-expanded-font-size: calc(12px + 1vw);
 
 .log-entry-expand-button {
   &:hover {
-    color: $color-orange-light;
+  color: $color-orange-light;
   }
   position: absolute;
   right: 10px;
@@ -106,9 +106,9 @@ $log-entry-expanded-font-size: calc(12px + 1vw);
 
 .log-entry-expanded-group {
   > h2 {
-    display: inline-block;
-    font-size: $log-entry-expanded-font-size;
-    line-height: $log-entry-expanded-cirle-diameter;
+  display: inline-block;
+  font-size: $log-entry-expanded-font-size;
+  line-height: $log-entry-expanded-cirle-diameter;
   }
   color: $color-gray;
 }
@@ -145,19 +145,19 @@ $log-entry-expanded-font-size: calc(12px + 1vw);
 .button-red {
   &:hover,
   &:focus {
-    border: none;
-    transition: background-color .2s;
-    background-color: $color-red;
+  border: none;
+  transition: background-color .2s;
+  background-color: $color-red;
   }
   border: 1px solid $color-red;
 }
 .button-blue {
   &:hover,
   &:focus {
-    border: none;
-    transition: background-color .2s;
-    background-color: $color-blue;
-    color: $color-white;
+  border: none;
+  transition: background-color .2s;
+  background-color: $color-blue;
+  color: $color-white;
   }
   border: 1px solid $color-blue;
 }

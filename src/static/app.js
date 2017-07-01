@@ -15,33 +15,33 @@ import { Navbar, SideNav } from './containers';
 
 class App extends React.Component {
 
-    static propTypes = {
-        isAuthenticated: React.PropTypes.bool.isRequired,
-        children: React.PropTypes.shape().isRequired,
-        dispatch: React.PropTypes.func.isRequired,
-        pathName: React.PropTypes.string.isRequired
-    };
+  static propTypes = {
+    isAuthenticated: React.PropTypes.bool.isRequired,
+    children: React.PropTypes.shape().isRequired,
+    dispatch: React.PropTypes.func.isRequired,
+    pathName: React.PropTypes.string.isRequired
+  };
 
-    render() {
-      return (
-        <MuiThemeProvider>
-          <div className="app">
-            <Navbar />
-            <SideNav />
-            <section style={{display: "flex", justifyContent: "center", margin: 0}}>
-              {this.props.children}
-            </section>
-          </div>
-        </MuiThemeProvider>
-      );
-    }
+  render() {
+    return (
+    <MuiThemeProvider>
+      <div className="app">
+      <Navbar />
+      <SideNav />
+      <section style={{display: "flex", justifyContent: "center", margin: 0}}>
+        {this.props.children}
+      </section>
+      </div>
+    </MuiThemeProvider>
+    );
+  }
 }
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        isAuthenticated: state.auth.isAuthenticated,
-        pathName: ownProps.location.pathname
-    };
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    pathName: ownProps.location.pathname
+  };
 };
 
 export default connect(mapStateToProps)(App);

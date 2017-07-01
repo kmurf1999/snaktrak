@@ -5,15 +5,15 @@ import {
 
 export function toggleMenu(isOpen = false) {
   return {
-    type: TOGGLE_MENU,
-    payload: isOpen
+  type: TOGGLE_MENU,
+  payload: isOpen
   };
 }
 
 export function changeDate(date) {
 
   return {
-    type: CHANGE_DATE,
-    payload: date
+  type: CHANGE_DATE,
+  payload: date
   };
 }

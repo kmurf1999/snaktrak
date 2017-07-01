@@ -3,7 +3,7 @@
 2 info using npm@3.10.10
 3 info using node@v6.11.0
 4 verbose stack Error: ENOENT: no such file or directory, open '/home/kmurph/snaktrak/src/package.json'
-4 verbose stack     at Error (native)
+4 verbose stack   at Error (native)
 5 verbose cwd /home/kmurph/snaktrak/src/static
 6 error Linux 4.4.0-78-generic
 7 error argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "prod"

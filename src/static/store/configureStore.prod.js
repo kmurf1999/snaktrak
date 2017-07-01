@@ -5,14 +5,14 @@ import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
 
 export default function configureStore(initialState, history) {
-    // Add so dispatched route actions to the history
-    const reduxRouterMiddleware = routerMiddleware(history);
+  // Add so dispatched route actions to the history
+  const reduxRouterMiddleware = routerMiddleware(history);
 
-    const middleware = applyMiddleware(thunk, reduxRouterMiddleware);
+  const middleware = applyMiddleware(thunk, reduxRouterMiddleware);
 
-    const createStoreWithMiddleware = compose(
-        middleware
-    );
+  const createStoreWithMiddleware = compose(
+    middleware
+  );
 
-    return createStoreWithMiddleware(createStore)(rootReducer, initialState);
+  return createStoreWithMiddleware(createStore)(rootReducer, initialState);
 }

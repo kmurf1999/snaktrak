@@ -15,13 +15,13 @@ import RaisedButton from 'material-ui/RaisedButton/RaisedButton';
 
 const renderField =  ({ input, label, type, meta: { touched, error, warning } }) => (
   <div>
-      <TextField
-        {...input}
-        floatingLabelText={`${label}`}
-        required
-        type={type}
-        errorText={touched && error || touched && warning ? `${error}` : ''}
-      />
+    <TextField
+    {...input}
+    floatingLabelText={`${label}`}
+    required
+    type={type}
+    errorText={touched && error || touched && warning ? `${error}` : ''}
+    />
   </div>
 )
 
@@ -29,37 +29,37 @@ const renderField =  ({ input, label, type, meta: { touched, error, warning } })
 class SignUpView extends React.Component {
 
   constructor(props) {
-      super(props);
+    super(props);
 
-      const redirectRoute = this.props.location ? this.props.location.query.next || '/' : '/';
-      this.state = {
-          redirectTo: redirectRoute
-      };
+    const redirectRoute = this.props.location ? this.props.location.query.next || '/' : '/';
+    this.state = {
+      redirectTo: redirectRoute
+    };
   }
 
   onSubmit(props) {
-    this.props.actions.authSignUpUser(props.username, props.phone_number, props.password, "/signup/validate");
-    //call submit action
+  this.props.actions.authSignUpUser(props.username, props.phone_number, props.password, "/signup/validate");
+  //call submit action
   }
 
   render() {
-    const { statusText, handleSubmit, pristine, reset, submitting } = this.props;
-    return (
-      <div style={{display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", marginTop: "16px"}}>
-        <h2>Create Account</h2>
-        <Paper zDepth={1} className="form">
-          <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-            {statusText ? <div className="status-text">{statusText}</div> : ''}
-            <Field name="username" type="text" label="Username" component={renderField} />
-            <Field name="phone_number" type="tel" label="Phone number" component={renderField} />
-            <Field name="password" type="password" label="Password" component={renderField} />
-            <Field name="confirm_password" type="password" label="Confirm password" component={renderField} />
-            <RaisedButton style={{marginTop: "10px"}} label="Submit" fullWidth={true} type="submit" disabled={pristine || submitting} primary={true} />
-          </form>
-        </Paper>
-        <p>Already have an account? <Link to="/login">Log in</Link></p>
-      </div>
-    );
+  const { statusText, handleSubmit, pristine, reset, submitting } = this.props;
+  return (
+    <div style={{display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "center", marginTop: "16px"}}>
+    <h2>Create Account</h2>
+    <Paper zDepth={1} className="form">
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      {statusText ? <div className="status-text">{statusText}</div> : ''}
+      <Field name="username" type="text" label="Username" component={renderField} />
+      <Field name="phone_number" type="tel" label="Phone number" component={renderField} />
+      <Field name="password" type="password" label="Password" component={renderField} />
+      <Field name="confirm_password" type="password" label="Confirm password" component={renderField} />
+      <RaisedButton style={{marginTop: "10px"}} label="Submit" fullWidth={true} type="submit" disabled={pristine || submitting} primary={true} />
+      </form>
+    </Paper>
+    <p>Already have an account? <Link to="/login">Log in</Link></p>
+    </div>
+  );
   }
 }
 
@@ -67,42 +67,42 @@ class SignUpView extends React.Component {
 function validate(values) {
   const errors = {};
   if (!values.username) {
-    errors.username = 'You must enter a username';
+  errors.username = 'You must enter a username';
   } else if (values.username.length > 30) {
-    errors.username = 'Must be 30 characters or less';
+  errors.username = 'Must be 30 characters or less';
   }
   if (!values.phone_number) {
-    errors.phone_number = 'You must enter a phone number ';
+  errors.phone_number = 'You must enter a phone number ';
   } else if (!/^[0-9-()+-]+$/i.test(values.phone_number)) {
-    errors.phone_number = 'You must enter a valid phone number';
+  errors.phone_number = 'You must enter a valid phone number';
   }
   if (!values.password) {
-    errors.password = 'You must enter a password';
+  errors.password = 'You must enter a password';
   }
   if (!values.confirm_password) {
-    errors.confirm_password = 'You must confirm password';
+  errors.confirm_password = 'You must confirm password';
   } else if (values.password !== values.confirm_password) {
-    errors.confirm_password = 'Passwords do not match';
+  errors.confirm_password = 'Passwords do not match';
   }
   return errors;
 }
 
 const mapStateToProps = (state) => {
-    return {
-        isAuthenticated: state.auth.isAuthenticated,
-        isAuthenticating: state.auth.isAuthenticating,
-        statusText: state.auth.statusText,
-        initialValues: {
-          phone_number:"1"
-        }
-    };
+  return {
+    isAuthenticated: state.auth.isAuthenticated,
+    isAuthenticating: state.auth.isAuthenticating,
+    statusText: state.auth.statusText,
+    initialValues: {
+      phone_number:"1"
+    }
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        dispatch,
-        actions: bindActionCreators(actionCreators, dispatch)
-    };
+  return {
+    dispatch,
+    actions: bindActionCreators(actionCreators, dispatch)
+  };
 };
 
 SignUpView = reduxForm({
