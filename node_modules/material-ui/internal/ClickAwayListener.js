@@ -122,8 +122,8 @@ var ClickAwayListener = function (_Component) {
   return ClickAwayListener;
 }(_react.Component);
 
-ClickAwayListener.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ClickAwayListener.propTypes = {
   children: _propTypes2.default.element,
   onClickAway: _propTypes2.default.func
-} : {};
+} : void 0;
 exports.default = ClickAwayListener;

@@ -94,11 +94,11 @@ var CalendarActionButton = function (_Component) {
   return CalendarActionButton;
 }(_react.Component);
 
-CalendarActionButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CalendarActionButton.propTypes = {
   autoOk: _propTypes2.default.bool,
   cancelLabel: _propTypes2.default.node,
   okLabel: _propTypes2.default.node,
   onTouchTapCancel: _propTypes2.default.func,
   onTouchTapOk: _propTypes2.default.func
-} : {};
+} : void 0;
 exports.default = CalendarActionButton;

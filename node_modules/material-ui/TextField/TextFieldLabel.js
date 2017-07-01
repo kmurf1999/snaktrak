@@ -67,7 +67,7 @@ var TextFieldLabel = function TextFieldLabel(props) {
   );
 };
 
-TextFieldLabel.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TextFieldLabel.propTypes = {
   /**
    * The label contents.
    */
@@ -107,7 +107,7 @@ TextFieldLabel.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 TextFieldLabel.defaultProps = {
   disabled: false,

@@ -187,7 +187,7 @@ DayButton.defaultProps = {
 DayButton.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-DayButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? DayButton.propTypes = {
   DateTimeFormat: _propTypes2.default.func.isRequired,
   date: _propTypes2.default.object,
   disabled: _propTypes2.default.bool,
@@ -195,5 +195,5 @@ DayButton.propTypes = process.env.NODE_ENV !== "production" ? {
   onKeyboardFocus: _propTypes2.default.func,
   onTouchTap: _propTypes2.default.func,
   selected: _propTypes2.default.bool
-} : {};
+} : void 0;
 exports.default = DayButton;

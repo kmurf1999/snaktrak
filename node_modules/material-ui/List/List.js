@@ -94,7 +94,7 @@ var List = function (_Component) {
 List.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-List.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? List.propTypes = {
   /**
    * These are usually `ListItem`s that are passed to
    * be part of the list.
@@ -104,5 +104,5 @@ List.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = List;

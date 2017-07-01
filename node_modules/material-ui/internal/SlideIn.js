@@ -128,11 +128,11 @@ SlideIn.defaultProps = {
 SlideIn.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-SlideIn.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? SlideIn.propTypes = {
   childStyle: _propTypes2.default.object,
   children: _propTypes2.default.node,
   direction: _propTypes2.default.oneOf(['left', 'right', 'up', 'down']),
   enterDelay: _propTypes2.default.number,
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = SlideIn;

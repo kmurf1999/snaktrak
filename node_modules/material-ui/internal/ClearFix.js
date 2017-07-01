@@ -55,12 +55,12 @@ var ClearFix = function ClearFix(_ref) {
 
 ClearFix.muiName = 'ClearFix';
 
-ClearFix.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ClearFix.propTypes = {
   children: _propTypes2.default.node,
   /**
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 exports.default = ClearFix;

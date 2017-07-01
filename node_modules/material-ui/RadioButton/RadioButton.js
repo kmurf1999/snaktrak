@@ -215,7 +215,7 @@ RadioButton.defaultProps = {
 RadioButton.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-RadioButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? RadioButton.propTypes = {
   /**
    * @ignore
    * checked if true
@@ -271,5 +271,5 @@ RadioButton.propTypes = process.env.NODE_ENV !== "production" ? {
    * The value of the radio button.
    */
   value: _propTypes2.default.any
-} : {};
+} : void 0;
 exports.default = RadioButton;

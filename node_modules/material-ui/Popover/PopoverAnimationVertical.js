@@ -133,7 +133,7 @@ PopoverAnimationVertical.defaultProps = {
 PopoverAnimationVertical.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-PopoverAnimationVertical.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? PopoverAnimationVertical.propTypes = {
   children: _propTypes2.default.node,
   className: _propTypes2.default.string,
   open: _propTypes2.default.bool.isRequired,
@@ -143,5 +143,5 @@ PopoverAnimationVertical.propTypes = process.env.NODE_ENV !== "production" ? {
   style: _propTypes2.default.object,
   targetOrigin: _propTypes4.default.origin.isRequired,
   zDepth: _propTypes4.default.zDepth
-} : {};
+} : void 0;
 exports.default = PopoverAnimationVertical;

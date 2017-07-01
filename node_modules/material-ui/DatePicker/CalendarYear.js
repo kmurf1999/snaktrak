@@ -179,7 +179,7 @@ var CalendarYear = function (_Component) {
 CalendarYear.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-CalendarYear.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CalendarYear.propTypes = {
   DateTimeFormat: _propTypes2.default.func.isRequired,
   locale: _propTypes2.default.string.isRequired,
   maxDate: _propTypes2.default.object.isRequired,
@@ -188,5 +188,5 @@ CalendarYear.propTypes = process.env.NODE_ENV !== "production" ? {
   selectedDate: _propTypes2.default.object.isRequired,
   utils: _propTypes2.default.object.isRequired,
   wordings: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = CalendarYear;

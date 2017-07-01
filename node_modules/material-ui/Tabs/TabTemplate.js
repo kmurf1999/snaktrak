@@ -42,10 +42,10 @@ var TabTemplate = function TabTemplate(_ref) {
   );
 };
 
-TabTemplate.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TabTemplate.propTypes = {
   children: _propTypes2.default.node,
   selected: _propTypes2.default.bool,
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 exports.default = TabTemplate;

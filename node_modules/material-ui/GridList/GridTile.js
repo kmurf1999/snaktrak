@@ -242,7 +242,7 @@ GridTile.defaultProps = {
 GridTile.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-GridTile.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? GridTile.propTypes = {
   /**
    * An IconButton element to be used as secondary action target
    * (primary action target is the tile itself).
@@ -303,5 +303,5 @@ GridTile.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the title element.
    */
   titleStyle: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = GridTile;

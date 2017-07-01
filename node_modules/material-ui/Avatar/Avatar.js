@@ -133,7 +133,7 @@ Avatar.defaultProps = {
 Avatar.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Avatar.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Avatar.propTypes = {
   /**
    * The backgroundColor of the avatar. Does not apply to image avatars.
    */
@@ -166,5 +166,5 @@ Avatar.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Avatar;

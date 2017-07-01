@@ -127,7 +127,7 @@ Step.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired,
   stepper: _propTypes2.default.object
 };
-Step.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Step.propTypes = {
   /**
    * Sets the step as active. Is passed to child components.
    */
@@ -158,5 +158,5 @@ Step.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-style of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Step;

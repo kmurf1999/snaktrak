@@ -115,7 +115,7 @@ ScaleIn.defaultProps = {
 ScaleIn.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-ScaleIn.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ScaleIn.propTypes = {
   childStyle: _propTypes2.default.object,
   children: _propTypes2.default.node,
   enterDelay: _propTypes2.default.number,
@@ -125,5 +125,5 @@ ScaleIn.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = ScaleIn;

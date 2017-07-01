@@ -168,7 +168,7 @@ var CardMedia = function (_Component) {
 CardMedia.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-CardMedia.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CardMedia.propTypes = {
   /**
    * If true, a click on this card component expands the card.
    */
@@ -205,5 +205,5 @@ CardMedia.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = CardMedia;

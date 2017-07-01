@@ -40,7 +40,7 @@ var NestedList = function NestedList(props) {
   );
 };
 
-NestedList.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? NestedList.propTypes = {
   children: _propTypes2.default.node,
   nestedLevel: _propTypes2.default.number.isRequired,
   open: _propTypes2.default.bool.isRequired,
@@ -48,6 +48,6 @@ NestedList.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 exports.default = NestedList;

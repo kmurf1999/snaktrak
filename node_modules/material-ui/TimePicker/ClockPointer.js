@@ -142,9 +142,9 @@ ClockPointer.defaultProps = {
 ClockPointer.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-ClockPointer.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ClockPointer.propTypes = {
   hasSelected: _propTypes2.default.bool,
   type: _propTypes2.default.oneOf(['hour', 'minute']),
   value: _propTypes2.default.number
-} : {};
+} : void 0;
 exports.default = ClockPointer;

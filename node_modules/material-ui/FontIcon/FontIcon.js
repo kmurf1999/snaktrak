@@ -136,7 +136,7 @@ FontIcon.defaultProps = {
 FontIcon.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-FontIcon.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? FontIcon.propTypes = {
   /**
    * This is the font color of the font icon. If not specified,
    * this component will default to muiTheme.palette.textColor.
@@ -154,5 +154,5 @@ FontIcon.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = FontIcon;

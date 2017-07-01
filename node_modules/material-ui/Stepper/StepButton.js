@@ -176,7 +176,7 @@ StepButton.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired,
   stepper: _propTypes2.default.object
 };
-StepButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? StepButton.propTypes = {
   /**
    * Passed from `Step` Is passed to StepLabel.
    */
@@ -213,5 +213,5 @@ StepButton.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-style of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = StepButton;

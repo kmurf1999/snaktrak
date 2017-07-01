@@ -210,7 +210,7 @@ var Tooltip = function (_Component) {
 Tooltip.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Tooltip.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Tooltip.propTypes = {
   /**
    * The css class name of the root element.
    */
@@ -224,5 +224,5 @@ Tooltip.propTypes = process.env.NODE_ENV !== "production" ? {
   style: _propTypes2.default.object,
   touch: _propTypes2.default.bool,
   verticalPosition: _propTypes2.default.oneOf(['top', 'bottom'])
-} : {};
+} : void 0;
 exports.default = Tooltip;

@@ -302,7 +302,7 @@ IconMenu.defaultProps = {
 IconMenu.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-IconMenu.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? IconMenu.propTypes = {
   /**
    * This is the point on the icon where the menu
    * `targetOrigin` will attach.
@@ -413,5 +413,5 @@ IconMenu.propTypes = process.env.NODE_ENV !== "production" ? {
    * layer, which will prevent clicks to the underlying elements.
    */
   useLayerForClickAway: _propTypes2.default.bool
-} : {};
+} : void 0;
 exports.default = IconMenu;

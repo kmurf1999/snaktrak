@@ -304,7 +304,7 @@ AppBar.defaultProps = {
 AppBar.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-AppBar.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? AppBar.propTypes = {
   /**
    * Can be used to render a tab inside an app bar for instance.
    */
@@ -380,5 +380,5 @@ AppBar.propTypes = process.env.NODE_ENV !== "production" ? {
    * The shadow of the app bar is also dependent on this property.
    */
   zDepth: _propTypes4.default.zDepth
-} : {};
+} : void 0;
 exports.default = AppBar;

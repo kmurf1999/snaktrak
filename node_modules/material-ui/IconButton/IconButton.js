@@ -298,7 +298,7 @@ IconButton.defaultProps = {
 IconButton.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-IconButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? IconButton.propTypes = {
   /**
    * Can be used to pass a `FontIcon` element as the icon for the button.
    */
@@ -380,5 +380,5 @@ IconButton.propTypes = process.env.NODE_ENV !== "production" ? {
    * readability on mobile devices.
    */
   touch: _propTypes2.default.bool
-} : {};
+} : void 0;
 exports.default = IconButton;

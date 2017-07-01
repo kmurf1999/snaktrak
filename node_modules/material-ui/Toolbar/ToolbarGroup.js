@@ -185,7 +185,7 @@ ToolbarGroup.defaultProps = {
 ToolbarGroup.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-ToolbarGroup.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ToolbarGroup.propTypes = {
   /**
    * Can be any node or number of nodes.
    */
@@ -208,5 +208,5 @@ ToolbarGroup.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = ToolbarGroup;

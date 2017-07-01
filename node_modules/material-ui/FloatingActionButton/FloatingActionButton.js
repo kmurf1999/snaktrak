@@ -315,7 +315,7 @@ FloatingActionButton.defaultProps = {
 FloatingActionButton.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-FloatingActionButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? FloatingActionButton.propTypes = {
   /**
    * This value will override the default background color for the button.
    * However it will not override the default disabled background color.
@@ -388,5 +388,5 @@ FloatingActionButton.propTypes = process.env.NODE_ENV !== "production" ? {
    * The zDepth of the underlying `Paper` component.
    */
   zDepth: _propTypes4.default.zDepth
-} : {};
+} : void 0;
 exports.default = FloatingActionButton;

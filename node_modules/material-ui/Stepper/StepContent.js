@@ -135,7 +135,7 @@ StepContent.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired,
   stepper: _propTypes2.default.object
 };
-StepContent.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? StepContent.propTypes = {
   /**
    * Expands the content
    */
@@ -164,5 +164,5 @@ StepContent.propTypes = process.env.NODE_ENV !== "production" ? {
    * Adjust the duration of the content expand transition. Passed as a prop to the transition component.
    */
   transitionDuration: _propTypes2.default.number
-} : {};
+} : void 0;
 exports.default = StepContent;

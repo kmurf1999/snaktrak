@@ -174,10 +174,10 @@ RenderToLayer.defaultProps = {
 RenderToLayer.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-RenderToLayer.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? RenderToLayer.propTypes = {
   componentClickAway: _propTypes2.default.func,
   open: _propTypes2.default.bool.isRequired,
   render: _propTypes2.default.func.isRequired,
   useLayerForClickAway: _propTypes2.default.bool
-} : {};
+} : void 0;
 exports.default = RenderToLayer;

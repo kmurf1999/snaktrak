@@ -133,10 +133,10 @@ ClockNumber.defaultProps = {
 ClockNumber.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-ClockNumber.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ClockNumber.propTypes = {
   isSelected: _propTypes2.default.bool,
   onSelected: _propTypes2.default.func,
   type: _propTypes2.default.oneOf(['hour', 'minute']),
   value: _propTypes2.default.number
-} : {};
+} : void 0;
 exports.default = ClockNumber;

@@ -299,12 +299,12 @@ TouchRipple.defaultProps = {
 TouchRipple.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-TouchRipple.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TouchRipple.propTypes = {
   abortOnScroll: _propTypes2.default.bool,
   centerRipple: _propTypes2.default.bool,
   children: _propTypes2.default.node,
   color: _propTypes2.default.string,
   opacity: _propTypes2.default.number,
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = TouchRipple;
