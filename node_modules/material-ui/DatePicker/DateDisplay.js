@@ -227,7 +227,7 @@ DateDisplay.defaultProps = {
 DateDisplay.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-DateDisplay.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? DateDisplay.propTypes = {
   DateTimeFormat: _propTypes2.default.func.isRequired,
   disableYearSelection: _propTypes2.default.bool,
   locale: _propTypes2.default.string.isRequired,
@@ -237,5 +237,5 @@ DateDisplay.propTypes = process.env.NODE_ENV !== "production" ? {
   onTouchTapYear: _propTypes2.default.func,
   selectedDate: _propTypes2.default.object.isRequired,
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = DateDisplay;

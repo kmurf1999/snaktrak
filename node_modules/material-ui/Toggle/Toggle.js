@@ -254,7 +254,7 @@ Toggle.defaultProps = {
 Toggle.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Toggle.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Toggle.propTypes = {
   /**
    * Determines whether the Toggle is initially turned on.
    * **Warning:** This cannot be used in conjunction with `toggled`.
@@ -329,5 +329,5 @@ Toggle.propTypes = process.env.NODE_ENV !== "production" ? {
    * ValueLink prop for when using controlled toggle.
    */
   valueLink: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Toggle;

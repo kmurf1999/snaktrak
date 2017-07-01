@@ -124,7 +124,7 @@ var SnackbarBody = function SnackbarBody(props, context) {
 };
 
 exports.SnackbarBody = SnackbarBody;
-SnackbarBody.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? SnackbarBody.propTypes = {
   /**
    * The label for the action on the snackbar.
    */
@@ -161,7 +161,7 @@ SnackbarBody.propTypes = process.env.NODE_ENV !== "production" ? {
    * Width of the screen.
    */
   width: _propTypes2.default.number.isRequired
-} : {};
+} : void 0;
 
 SnackbarBody.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired

@@ -96,7 +96,7 @@ CardText.muiName = 'CardText';
 CardText.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-CardText.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CardText.propTypes = {
   /**
    * If true, a click on this card component expands the card.
    */
@@ -117,5 +117,5 @@ CardText.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = CardText;

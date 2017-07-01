@@ -263,7 +263,7 @@ Tabs.defaultProps = {
 Tabs.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Tabs.propTypes = {
   /**
    * Should be used to pass `Tab` components.
    */
@@ -315,5 +315,5 @@ Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
    * Makes Tabs controllable and selects the tab whose value prop matches this prop.
    */
   value: _propTypes2.default.any
-} : {};
+} : void 0;
 exports.default = Tabs;

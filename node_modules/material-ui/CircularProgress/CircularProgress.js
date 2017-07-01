@@ -229,7 +229,7 @@ CircularProgress.defaultProps = {
 CircularProgress.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-CircularProgress.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CircularProgress.propTypes = {
   /**
    * Override the progress's color.
    */
@@ -267,5 +267,5 @@ CircularProgress.propTypes = process.env.NODE_ENV !== "production" ? {
    * The value of progress, only works in determinate mode.
    */
   value: _propTypes2.default.number
-} : {};
+} : void 0;
 exports.default = CircularProgress;

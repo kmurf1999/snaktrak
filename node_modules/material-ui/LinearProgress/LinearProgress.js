@@ -201,7 +201,7 @@ LinearProgress.defaultProps = {
 LinearProgress.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-LinearProgress.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? LinearProgress.propTypes = {
   /**
    * The color of the progress bar, defaults to
    * primary color of theme.
@@ -228,5 +228,5 @@ LinearProgress.propTypes = process.env.NODE_ENV !== "production" ? {
    * The value of progress, only works in determinate mode.
    */
   value: _propTypes2.default.number
-} : {};
+} : void 0;
 exports.default = LinearProgress;

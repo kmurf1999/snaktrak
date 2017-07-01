@@ -118,7 +118,7 @@ var AutoLockScrolling = function (_Component) {
   return AutoLockScrolling;
 }(_react.Component);
 
-AutoLockScrolling.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? AutoLockScrolling.propTypes = {
   lock: _propTypes2.default.bool.isRequired
-} : {};
+} : void 0;
 exports.default = AutoLockScrolling;

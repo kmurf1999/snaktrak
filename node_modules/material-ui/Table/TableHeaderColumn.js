@@ -157,7 +157,7 @@ var TableHeaderColumn = function (_Component) {
 TableHeaderColumn.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-TableHeaderColumn.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TableHeaderColumn.propTypes = {
   children: _propTypes2.default.node,
   /**
    * The css class name of the root element.
@@ -198,5 +198,5 @@ TableHeaderColumn.propTypes = process.env.NODE_ENV !== "production" ? {
    * Additional styling that can be applied to the tooltip.
    */
   tooltipStyle: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = TableHeaderColumn;

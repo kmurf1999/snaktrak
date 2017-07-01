@@ -127,7 +127,7 @@ TableFooter.defaultProps = {
 TableFooter.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-TableFooter.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TableFooter.propTypes = {
   /**
    * @ignore
    * Controls whether or not header rows should be adjusted
@@ -150,5 +150,5 @@ TableFooter.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = TableFooter;

@@ -129,7 +129,7 @@ SvgIcon.defaultProps = {
 SvgIcon.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-SvgIcon.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? SvgIcon.propTypes = {
   /**
    * Elements passed into the SVG Icon.
    */
@@ -161,5 +161,5 @@ SvgIcon.propTypes = process.env.NODE_ENV !== "production" ? {
    * and each unit will be worth 10px.
    */
   viewBox: _propTypes2.default.string
-} : {};
+} : void 0;
 exports.default = SvgIcon;

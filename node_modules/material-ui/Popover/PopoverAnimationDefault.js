@@ -155,7 +155,7 @@ PopoverAnimationDefault.defaultProps = {
 PopoverAnimationDefault.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-PopoverAnimationDefault.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? PopoverAnimationDefault.propTypes = {
   children: _propTypes2.default.node,
   /**
    * The css class name of the root element.
@@ -168,5 +168,5 @@ PopoverAnimationDefault.propTypes = process.env.NODE_ENV !== "production" ? {
   style: _propTypes2.default.object,
   targetOrigin: _propTypes4.default.origin.isRequired,
   zDepth: _propTypes4.default.zDepth
-} : {};
+} : void 0;
 exports.default = PopoverAnimationDefault;

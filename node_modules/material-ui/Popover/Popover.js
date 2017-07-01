@@ -438,7 +438,7 @@ Popover.defaultProps = {
 Popover.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Popover.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Popover.propTypes = {
   /**
    * This is the DOM element that will be used to set the position of the
    * popover.
@@ -512,5 +512,5 @@ Popover.propTypes = process.env.NODE_ENV !== "production" ? {
    * The zDepth of the popover.
    */
   zDepth: _propTypes4.default.zDepth
-} : {};
+} : void 0;
 exports.default = Popover;

@@ -250,7 +250,7 @@ var Snackbar = function (_Component) {
 Snackbar.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Snackbar.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Snackbar.propTypes = {
   /**
    * The label for the action on the snackbar.
    */
@@ -309,5 +309,5 @@ Snackbar.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Snackbar;

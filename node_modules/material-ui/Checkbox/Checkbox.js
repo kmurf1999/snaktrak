@@ -233,7 +233,7 @@ Checkbox.defaultProps = {
 Checkbox.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Checkbox.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Checkbox.propTypes = {
   /**
    * Checkbox is checked if true.
    */
@@ -290,5 +290,5 @@ Checkbox.propTypes = process.env.NODE_ENV !== "production" ? {
    * ValueLink for when using controlled checkbox.
    */
   valueLink: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Checkbox;

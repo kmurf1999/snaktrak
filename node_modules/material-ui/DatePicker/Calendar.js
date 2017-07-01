@@ -442,7 +442,7 @@ Calendar.defaultProps = {
 Calendar.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Calendar.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Calendar.propTypes = {
   DateTimeFormat: _propTypes2.default.func.isRequired,
   autoOk: _propTypes2.default.bool,
   cancelLabel: _propTypes2.default.node,
@@ -461,5 +461,5 @@ Calendar.propTypes = process.env.NODE_ENV !== "production" ? {
   open: _propTypes2.default.bool,
   shouldDisableDate: _propTypes2.default.func,
   utils: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Calendar;

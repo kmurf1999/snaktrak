@@ -161,12 +161,12 @@ CalendarToolbar.defaultProps = {
   nextMonth: true,
   prevMonth: true
 };
-CalendarToolbar.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CalendarToolbar.propTypes = {
   DateTimeFormat: _propTypes2.default.func.isRequired,
   displayDate: _propTypes2.default.object.isRequired,
   locale: _propTypes2.default.string.isRequired,
   nextMonth: _propTypes2.default.bool,
   onMonthChange: _propTypes2.default.func,
   prevMonth: _propTypes2.default.bool
-} : {};
+} : void 0;
 exports.default = CalendarToolbar;

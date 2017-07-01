@@ -121,7 +121,7 @@ Paper.defaultProps = {
 Paper.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Paper.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Paper.propTypes = {
   /**
    * Children passed into the paper element.
    */
@@ -147,5 +147,5 @@ Paper.propTypes = process.env.NODE_ENV !== "production" ? {
    * This number represents the zDepth of the paper shadow.
    */
   zDepth: _propTypes4.default.zDepth
-} : {};
+} : void 0;
 exports.default = Paper;

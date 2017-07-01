@@ -126,7 +126,7 @@ Stepper.defaultProps = {
 };
 Stepper.contextTypes = { muiTheme: _propTypes2.default.object.isRequired };
 Stepper.childContextTypes = { stepper: _propTypes2.default.object };
-Stepper.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Stepper.propTypes = {
   /**
    * Set the active step (zero based index). This will enable `Step` control helpers.
    */
@@ -151,5 +151,5 @@ Stepper.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-style of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Stepper;

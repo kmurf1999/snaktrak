@@ -419,7 +419,7 @@ var EnhancedSwitch = function (_Component) {
 EnhancedSwitch.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-EnhancedSwitch.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? EnhancedSwitch.propTypes = {
   checked: _propTypes2.default.bool,
   className: _propTypes2.default.string,
   defaultChecked: _propTypes2.default.bool,
@@ -450,5 +450,5 @@ EnhancedSwitch.propTypes = process.env.NODE_ENV !== "production" ? {
   thumbStyle: _propTypes2.default.object,
   trackStyle: _propTypes2.default.object,
   value: _propTypes2.default.any
-} : {};
+} : void 0;
 exports.default = EnhancedSwitch;

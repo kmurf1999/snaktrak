@@ -63,8 +63,8 @@ var MuiThemeProvider = function (_Component) {
 MuiThemeProvider.childContextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-MuiThemeProvider.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? MuiThemeProvider.propTypes = {
   children: _propTypes2.default.element,
   muiTheme: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = MuiThemeProvider;

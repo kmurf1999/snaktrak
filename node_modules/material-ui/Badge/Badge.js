@@ -141,7 +141,7 @@ Badge.defaultProps = {
 Badge.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Badge.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Badge.propTypes = {
   /**
    * This is the content rendered within the badge.
    */
@@ -170,5 +170,5 @@ Badge.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Badge;

@@ -264,7 +264,7 @@ DatePicker.defaultProps = {
 DatePicker.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-DatePicker.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? DatePicker.propTypes = {
   /**
    * Constructor for date formatting for the specified `locale`.
    * The constructor must follow this specification: ECMAScript Internationalization API 1.0 (ECMA-402).
@@ -406,5 +406,5 @@ DatePicker.propTypes = process.env.NODE_ENV !== "production" ? {
    * Sets the date for the Date Picker programmatically.
    */
   value: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = DatePicker;

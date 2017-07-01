@@ -119,7 +119,7 @@ GridList.defaultProps = {
 GridList.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-GridList.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? GridList.propTypes = {
   /**
    * Number of px for one cell height.
    * You can set `'auto'` if you want to let the children determine the height.
@@ -141,5 +141,5 @@ GridList.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = GridList;

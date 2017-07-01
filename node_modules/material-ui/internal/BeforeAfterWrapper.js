@@ -139,7 +139,7 @@ BeforeAfterWrapper.defaultProps = {
 BeforeAfterWrapper.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-BeforeAfterWrapper.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? BeforeAfterWrapper.propTypes = {
   afterElementType: _propTypes2.default.string,
   afterStyle: _propTypes2.default.object,
   beforeElementType: _propTypes2.default.string,
@@ -150,5 +150,5 @@ BeforeAfterWrapper.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = BeforeAfterWrapper;

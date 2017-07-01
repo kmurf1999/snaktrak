@@ -155,7 +155,7 @@ var CalendarMonth = function (_Component) {
   return CalendarMonth;
 }(_react.Component);
 
-CalendarMonth.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? CalendarMonth.propTypes = {
   DateTimeFormat: _propTypes2.default.func.isRequired,
   autoOk: _propTypes2.default.bool,
   displayDate: _propTypes2.default.object.isRequired,
@@ -167,5 +167,5 @@ CalendarMonth.propTypes = process.env.NODE_ENV !== "production" ? {
   selectedDate: _propTypes2.default.object.isRequired,
   shouldDisableDate: _propTypes2.default.func,
   utils: _propTypes2.default.object.isRequired
-} : {};
+} : void 0;
 exports.default = CalendarMonth;

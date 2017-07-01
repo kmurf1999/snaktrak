@@ -91,7 +91,7 @@ var BottomNavigationItem = function BottomNavigationItem(props, context) {
   );
 };
 
-BottomNavigationItem.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? BottomNavigationItem.propTypes = {
   /**
    * Set the icon representing the view for this item.
    */
@@ -105,7 +105,7 @@ BottomNavigationItem.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 BottomNavigationItem.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired

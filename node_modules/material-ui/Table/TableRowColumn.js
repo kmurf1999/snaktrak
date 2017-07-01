@@ -149,7 +149,7 @@ TableRowColumn.defaultProps = {
 TableRowColumn.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-TableRowColumn.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TableRowColumn.propTypes = {
   children: _propTypes2.default.node,
   /**
    * The css class name of the root element.
@@ -179,5 +179,5 @@ TableRowColumn.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = TableRowColumn;

@@ -53,7 +53,7 @@ var TextFieldHint = function TextFieldHint(props) {
   );
 };
 
-TextFieldHint.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TextFieldHint.propTypes = {
   /**
    * @ignore
    * The material-ui theme applied to this component.
@@ -71,7 +71,7 @@ TextFieldHint.propTypes = process.env.NODE_ENV !== "production" ? {
    * The hint text displayed.
    */
   text: _propTypes2.default.node
-} : {};
+} : void 0;
 
 TextFieldHint.defaultProps = {
   show: true

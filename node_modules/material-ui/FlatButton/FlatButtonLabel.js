@@ -83,8 +83,8 @@ var FlatButtonLabel = function (_Component) {
 FlatButtonLabel.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-FlatButtonLabel.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? FlatButtonLabel.propTypes = {
   label: _propTypes2.default.node,
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = FlatButtonLabel;

@@ -57,7 +57,7 @@ var Subheader = function Subheader(props, context) {
 
 Subheader.muiName = 'Subheader';
 
-Subheader.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Subheader.propTypes = {
   /**
    * Node that will be placed inside the `Subheader`.
    */
@@ -70,7 +70,7 @@ Subheader.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 Subheader.defaultProps = {
   inset: false

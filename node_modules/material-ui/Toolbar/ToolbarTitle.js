@@ -101,7 +101,7 @@ ToolbarTitle.muiName = 'ToolbarTitle';
 ToolbarTitle.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-ToolbarTitle.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ToolbarTitle.propTypes = {
   /**
    * The css class name of the root element.
    */
@@ -114,5 +114,5 @@ ToolbarTitle.propTypes = process.env.NODE_ENV !== "production" ? {
    * The text to be displayed.
    */
   text: _propTypes2.default.node
-} : {};
+} : void 0;
 exports.default = ToolbarTitle;

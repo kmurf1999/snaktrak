@@ -235,7 +235,7 @@ TimeDisplay.defaultProps = {
 TimeDisplay.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-TimeDisplay.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? TimeDisplay.propTypes = {
   affix: _propTypes2.default.oneOf(['', 'pm', 'am']),
   format: _propTypes2.default.oneOf(['ampm', '24hr']),
   mode: _propTypes2.default.oneOf(['hour', 'minute']),
@@ -243,5 +243,5 @@ TimeDisplay.propTypes = process.env.NODE_ENV !== "production" ? {
   onSelectHour: _propTypes2.default.func,
   onSelectMin: _propTypes2.default.func,
   selectedTime: _propTypes2.default.object.isRequired
-} : {};
+} : void 0;
 exports.default = TimeDisplay;

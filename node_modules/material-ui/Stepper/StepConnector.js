@@ -70,7 +70,7 @@ var StepConnector = function StepConnector(props, context) {
   );
 };
 
-StepConnector.propTypes = process.env.NODE_ENV !== "production" ? propTypes : {};
+process.env.NODE_ENV !== "production" ? StepConnector.propTypes = propTypes : void 0;
 StepConnector.contextTypes = contextTypes;
 
 exports.PlainStepConnector = StepConnector;

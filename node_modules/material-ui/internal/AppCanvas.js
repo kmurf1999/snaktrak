@@ -92,7 +92,7 @@ var AppCanvas = function (_Component) {
 AppCanvas.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-AppCanvas.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? AppCanvas.propTypes = {
   children: _propTypes2.default.node
-} : {};
+} : void 0;
 exports.default = AppCanvas;

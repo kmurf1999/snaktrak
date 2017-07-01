@@ -141,12 +141,12 @@ SlideInChild.defaultProps = {
 SlideInChild.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-SlideInChild.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? SlideInChild.propTypes = {
   children: _propTypes2.default.node,
   direction: _propTypes2.default.string,
   enterDelay: _propTypes2.default.number,
   // This callback is needed bacause the direction could change when leaving the DOM
   getLeaveDirection: _propTypes2.default.func.isRequired,
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = SlideInChild;

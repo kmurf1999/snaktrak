@@ -51,7 +51,7 @@ var Divider = function Divider(props, context) {
 
 Divider.muiName = 'Divider';
 
-Divider.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Divider.propTypes = {
   /**
    * If true, the `Divider` will be indented.
    */
@@ -60,7 +60,7 @@ Divider.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 Divider.defaultProps = {
   inset: false

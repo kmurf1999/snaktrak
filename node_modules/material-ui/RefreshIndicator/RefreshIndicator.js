@@ -374,7 +374,7 @@ RefreshIndicator.defaultProps = {
 RefreshIndicator.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-RefreshIndicator.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? RefreshIndicator.propTypes = {
   /**
    * Override the theme's color of the indicator while it's status is
    * "ready" and it's percentage is less than 100.
@@ -413,5 +413,5 @@ RefreshIndicator.propTypes = process.env.NODE_ENV !== "production" ? {
    * The absolute top position of the indicator in pixels.
    */
   top: _propTypes2.default.number.isRequired
-} : {};
+} : void 0;
 exports.default = RefreshIndicator;

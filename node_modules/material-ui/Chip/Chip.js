@@ -282,7 +282,7 @@ Chip.defaultProps = {
   onTouchStart: function onTouchStart() {}
 };
 Chip.contextTypes = { muiTheme: _propTypes2.default.object.isRequired };
-Chip.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Chip.propTypes = {
   /**
    * Override the background color of the chip.
    */
@@ -343,5 +343,5 @@ Chip.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = Chip;

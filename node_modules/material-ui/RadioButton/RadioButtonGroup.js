@@ -193,7 +193,7 @@ RadioButtonGroup.defaultProps = {
 RadioButtonGroup.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-RadioButtonGroup.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? RadioButtonGroup.propTypes = {
   /**
    * Should be used to pass `RadioButton` components.
    */
@@ -235,5 +235,5 @@ RadioButtonGroup.propTypes = process.env.NODE_ENV !== "production" ? {
    * The `value` of the currently selected radio button.
    */
   valueSelected: _propTypes2.default.any
-} : {};
+} : void 0;
 exports.default = RadioButtonGroup;

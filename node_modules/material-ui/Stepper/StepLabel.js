@@ -153,7 +153,7 @@ var StepLabel = function StepLabel(props, context) {
 
 StepLabel.muiName = 'StepLabel';
 
-StepLabel.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? StepLabel.propTypes = {
   /**
    * Sets active styling. Overrides disabled coloring.
    */
@@ -186,7 +186,7 @@ StepLabel.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-style of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 
 StepLabel.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired,

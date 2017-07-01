@@ -92,7 +92,7 @@ ToolbarSeparator.muiName = 'ToolbarSeparator';
 ToolbarSeparator.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-ToolbarSeparator.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? ToolbarSeparator.propTypes = {
   /**
    * The css class name of the root element.
    */
@@ -101,5 +101,5 @@ ToolbarSeparator.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object
-} : {};
+} : void 0;
 exports.default = ToolbarSeparator;

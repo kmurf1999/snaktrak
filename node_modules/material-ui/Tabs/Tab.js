@@ -158,7 +158,7 @@ Tab.muiName = 'Tab';
 Tab.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Tab.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Tab.propTypes = {
   /**
    * Override the inline-styles of the button element.
    */
@@ -211,5 +211,5 @@ Tab.propTypes = process.env.NODE_ENV !== "production" ? {
    * This property is overriden by the Tabs component.
    */
   width: _propTypes2.default.string
-} : {};
+} : void 0;
 exports.default = Tab;

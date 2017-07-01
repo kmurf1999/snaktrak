@@ -132,7 +132,7 @@ Overlay.defaultProps = {
 Overlay.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-Overlay.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? Overlay.propTypes = {
   autoLockScrolling: _propTypes2.default.bool,
   show: _propTypes2.default.bool.isRequired,
   /**
@@ -140,5 +140,5 @@ Overlay.propTypes = process.env.NODE_ENV !== "production" ? {
    */
   style: _propTypes2.default.object,
   transitionEnabled: _propTypes2.default.bool
-} : {};
+} : void 0;
 exports.default = Overlay;
