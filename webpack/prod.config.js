@@ -40,18 +40,6 @@ module.exports = {
             }
         }),
         new webpack.optimize.AggressiveMergingPlugin(),
-        new OfflinePlugin({
-          publicPath: '/',
-          excludes: ['**/.*', '**/*.map'],
-          externals: ['/'],
-          ServiceWorker: {
-              navigateFallbackURL: '/'
-          },
-          AppCache: {
-              FALLBACK: {
-                  '/': '/200.html'
-              }
-          }
-        })
+        new OfflinePlugin()
     ]
 };

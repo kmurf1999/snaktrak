@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-npm i
+yarn
 npm run dev

@@ -15,7 +15,7 @@
   "rules": {
     // not sure why airbnb turned this on. gross!
     "comma-dangle": 0,
-    "indent": [2, 4, {"SwitchCase": 1}],
+    "indent": [2, 2, {"SwitchCase": 1}],
     // we prefer to be able to declara all parameters a function receives
     "no-unused-vars": [2, {
       "vars": "local",
@@ -31,10 +31,10 @@
     // allow assign values to props of parameters
     "no-param-reassign": [2, {"props": false}],
     "react/jsx-indent-props": 0,
-    // allows onclick in elements that are not clickable (eg: tr) 
+    // allows onclick in elements that are not clickable (eg: tr)
     "jsx-a11y/no-static-element-interactions": 0,
     // enforce consistent indentation style. The default style is 4 spaces
-    "react/jsx-indent": [2, 4],
+    "react/jsx-indent": [2, 2],
     // Ensure correct position of the first property.
     "react/jsx-first-prop-new-line": [2, "never"],
     // don't force break chaining into new lines because this this.props.actions.authLoginUser() is valid
@@ -44,7 +44,11 @@
     // don't prefer prefer-stateless-function
     "react/prefer-stateless-function": 0,
     // allow jsx in .js files
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    // don't enforce boolean attributes
+    "react/jsx-boolean-value": 0,
+    "react/forbid-prop-types": 0,
+    "no-class-assign": 0,
   },
   "env": {
     "browser": true,
